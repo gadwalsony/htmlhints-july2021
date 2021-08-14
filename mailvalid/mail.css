@@ -1,0 +1,14 @@
+.container{
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background-color: powderblue;
+}
+.container input{
+    border: none;
+    border-color: blanchedalmond;
+    border-radius: 4px;
+
+}

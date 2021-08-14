@@ -1,0 +1,63 @@
+body{
+    background-image: url(https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+h2{
+    color:white;
+    text-align: center;
+    letter-spacing: 5px;
+}
+.menu a{
+    display: inline-block;
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 5px;
+    padding: 10px;
+
+}
+.main h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+
+}
+.main p{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+.btn{
+    padding: 50px;
+    margin-top: 5px;
+    text-align: center;
+}
+.btn button{
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: none;
+    background-color: transparent;
+    color: white;
+}
+.logo a{
+    color: whitesmoke;
+    font-size: 30px;
+    margin-right: 40px;
+    padding: 30px;
+}
+.logo{
+    text-align: center;
+}
+.follow{
+    color: white;
+}
+.follow a{
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}

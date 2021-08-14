@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content="width = device-width, initial scale = 1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <style>
+             .custom-btn{
+                background-color: plum;
+                color: black;
+                padding: 10px 6px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                 }
+            .card{
+                display: inline-block;
+                border:solid 2px;
+                text-align: center;
+                margin: 20px;
+                background-color: plum;
+            
+            }
+            h2{
+              color: plum;
+              
+              }
+              h3{
+                color:black;
+              }
+             /*body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+             }*/
+        </style>
+
+    </head>
+    
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+        <div style="width: 100%; text-align: left ;">
+            <h2>Camera Rentals</h2>
+        </div>
+        <div class = "card">
+                
+            <img src = "https://i.pinimg.com/564x/e6/31/ab/e631abb91e4b9a0abf259368f5e5dfe8.jpg" width = "200" height = "200" alt = "Camera">
+            <h3>Camera</h3>
+                    <button onClick = "makepayment()" id="rzp-button1" class = "custom-btn">Book Now</button>
+
+        </div>
+        
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+var options = {
+    "key": "rzp_test_cp0i1RzRdwXaXK", // Enter the Key ID generated from the Dashboard
+    "amount": "100000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Click me!",
+    "description": "Payment for camera rental",
+    "image": "data:image/jpeg;base64,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",
+    "order_id": "", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "handler": function (response){
+        alert(response.razorpay_payment_id);
+        
+        alert(response.razorpay_signature)
+    },
+    "prefill": {
+        "name": "Gadwal Sony",
+        "email": "gadwalsony@gmail.com",
+        "contact": "9999999999"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "plum"
+    }
+};
+var rzp1 = new Razorpay(options);
+rzp1.on('payment.failed', function (response){
+        alert(response.error.code);
+        alert(response.error.description);
+        alert(response.error.source);
+        alert(response.error.step);
+        alert(response.error.reason);
+        alert(response.error.metadata.order_id);
+        alert(response.error.metadata.payment_id);
+});
+function makepayment(){
+    document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+
+}
+}
+
+
+
+
+
+
+</script>
+</body>
+    </html>
+
+
+
+
+     <!-- <form action="https://www.example.com/payment/success/" method="POST">
+        <script
+            src="https://checkout.razorpay.com/v1/checkout.js"
+            data-key="" // Enter the Test API Key ID generated from Dashboard → Settings → API Keys
+            data-amount="1000" // Amount is in currency subunits. Hence, 29935 refers to 29935 paise or ₹299.35.
+            data-currency="INR"// You can accept international payments by changing the currency code. Contact our Support Team to enable International for your account
+            data-order_id=""// Replace with the order_id generated by you in the backend.
+            data-buttontext="Pay with Razorpay"
+            data-name="HTML HINTS"
+            data-description="This Payment Is For My Workshop"
+            data-image="https://www.htmlhints.com/image/favicon.png"
+            data-prefill.name="Gaurav Kumar"
+            data-prefill.email="gaurav.kumar@example.com"
+            data-theme.color="black"
+        ></script>
+        <input type="hidden" custom="Hidden Element" name="hidden">
+        </form> -->
+    
